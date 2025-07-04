@@ -1,0 +1,241 @@
+.newsletter {
+    margin: 40px 120px;
+    background: #f4efff;
+    border-radius: 80px 0 0 20px;
+    position: relative;
+    overflow: visible;
+
+    // Background image 1 - Bottom Left
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 300px;
+        height: 300px;
+        background: url('/images/group-ellipse-1.png') no-repeat left bottom;
+        background-size: contain;
+        z-index: 0;
+    }
+
+    // Background image 2 - Top Right
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 300px;
+        background: url('/images/group-ellipse-2.png') no-repeat right top;
+        background-size: contain;
+        z-index: 0;
+    }
+
+    .container {
+        z-index: 1;
+        max-width: 920px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        padding: 80px 20px;
+    }
+
+    .title {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 33px;
+        line-height: 54px;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #5E6282;
+
+        margin-bottom: 40px;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        .inputWrapper {
+            width: 100%;
+            max-width: 421px;
+
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 14px 20px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+
+            input {
+                border: none;
+                outline: none;
+                font-family: 'Montserrat';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                padding-left: 10px;
+                width: 240px;
+
+                &::placeholder {
+                    color: #8d8d8d;
+                }
+            }
+
+            img {
+                flex-shrink: 0;
+            }
+        }
+
+        button {
+            background: linear-gradient(180deg, #FF946D 0%, #FF7D68 100%);
+            color: white;
+            padding: 14px 28px;
+
+            font-family: 'OpenSans';
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+
+    .paperPlane {
+        position: absolute;
+        top: 0px;
+        right: -160px;
+        transform: translate(50%, -50%);
+        background: linear-gradient(135deg, #5F2EEA, #6C63FF);
+        padding: 16px;
+        border-radius: 50%;
+        z-index: 2;
+
+        img {
+            display: block;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .newsletter {
+        width: 335px;
+        margin: 40px 16px;
+        padding: 85px 33px;
+        border-radius: 129px 20px 20px 20px;
+        position: relative;
+
+        .container {
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .title {
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 100%;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .form {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 10px;
+
+            .inputWrapper {
+                flex: 2;
+                display: flex;
+                align-items: center;
+                background: white;
+                padding: 12px 16px;
+                border-radius: 12px;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+
+                input {
+                    border: none;
+                    outline: none;
+                    font-size: 14px;
+                    width: 100%;
+                    font-family: 'Montserrat';
+
+                    &::placeholder {
+                        color: #8d8d8d;
+                    }
+                }
+
+                img {
+                    flex-shrink: 0;
+                }
+            }
+
+            button {
+                flex: 1;
+                padding: 12px;
+                font-size: 14px;
+                border: none;
+                border-radius: 12px;
+                background: linear-gradient(180deg, #FF946D 0%, #FF7D68 100%);
+                color: white;
+                font-weight: 600;
+                font-family: 'OpenSans';
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+                cursor: pointer;
+                transition: opacity 0.3s;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+
+        .paperPlane {
+            top: -100px;
+            right: -10px;
+            transform: translate(50%, 0%);
+            padding: 10px;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background-size: contain;
+            z-index: 0;
+        }
+
+        &::after {
+            top: 0;
+            right: 0;
+        }
+    }
+}

@@ -1,0 +1,194 @@
+.stepsSection {
+    background-color: #fffefc;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 60px;
+    max-width: 1070px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+.right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 280px;
+    margin-top: 150px;
+    transition: all 0.6s ease;
+}
+
+
+.header {
+    margin-bottom: 40px;
+
+    p {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #5E6282;
+    }
+
+    h2 {
+        font-size: 50px;
+        font-family: 'Volkhov', serif;
+        font-weight: 700;
+        margin-top: 12px;
+        color: #1e1d4c;
+        text-transform: capitalize;
+    }
+}
+
+.stepsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.stepCard {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    width: 395px;
+
+    .iconWrapper {
+        width: 60px;
+        height: 60px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+    }
+
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h3 {
+        font-size: 18px;
+        color: #1e1d4c;
+        margin: 0 0 6px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    p {
+        font-size: 14px;
+        color: #5e6282;
+        margin: 0;
+    }
+}
+
+.travelCardSplit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    transition: gap 0.6s ease;
+    position: relative;
+}
+
+.cardWrapper {
+    transition: transform 0.6s ease;
+}
+
+.cardLeft {
+    transform: translateX(0);
+    z-index: 2;
+}
+
+.cardRight {
+    transform: translateX(0);
+    z-index: 1;
+}
+
+.inView {
+    .travelCardSplit {
+        gap: 40px;
+
+        .cardLeft {
+            transform: translateX(-40px) rotateY(-5deg);
+        }
+
+        .cardRight {
+            transform: translateX(40px) rotateY(5deg);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0px 20px;
+        align-items: center;
+        text-align: start;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .header {
+        h2 {
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .stepsGrid {
+        align-items: center;
+    }
+
+    .stepCard {
+        width: 100%;
+        max-width: 360px;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .right {
+        margin-top: 40px;
+        width: 335px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: -100px;
+    }
+
+    .travelCardSplit {
+        gap: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardWrapper {
+        transform: none;
+        max-width: 100%;
+    }
+}

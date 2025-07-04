@@ -1,0 +1,182 @@
+.heroSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+.container {
+  padding: 100px 80px;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px 20px;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+.content {
+  max-width: 630px;
+  padding: 0px;
+  margin-top: -90px;
+
+  @media (max-width: 768px) {
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+.label {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 20px;
+  color: #df6951;
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+}
+
+.title {
+  margin-top: 24px;
+  font-family: 'Volkhov';
+  font-weight: 700;
+  font-size: 84px;
+  line-height: 89px;
+  color: #181e4b;
+
+  span {
+    color: #df6951;
+    text-decoration: underline wavy #df6951 3px;
+    text-underline-offset: 6px;
+  }
+
+  @media (max-width: 768px) {
+    font-family: 'Volkhov';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+  }
+}
+
+.description {
+  max-width: 477px;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #5e6282;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0%;
+
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+
+.primaryBtn {
+  background-color: #f1a501;
+  color: #fff;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 16px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0px 20px 35px 0px #f1a50126;
+
+  &:hover {
+    border: 1px solid #f1a501;
+    color: #f1a501;
+    background-color: #ffffff;
+  }
+}
+
+.playBtn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #686d77;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 500;
+
+  .playIcon {
+    background-color: #df6951;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+  }
+
+  &:hover {
+    color: #000;
+  }
+}
+
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 3;
+  margin-left: -200px;
+  margin-top: -100px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    margin-left: -40px;
+    margin-top: 0;
+
+    img {
+      width: 375px;
+      height: 360px;
+      opacity: 1;
+    }
+  }
+}

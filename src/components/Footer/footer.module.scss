@@ -1,0 +1,285 @@
+.footer {
+    background: #fff;
+    padding: 80px 40px;
+    font-size: 14px;
+    color: #5e6282;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .footerBlock {
+        flex: 1;
+        min-width: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    // Logo + Tagline
+    .column {
+        .logo {
+            font-family: 'Poppins';
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 100%;
+            letter-spacing: 0%;
+
+            color: #181E4B;
+            margin-bottom: 16px;
+            margin-top: 8px;
+        }
+
+        .tagline {
+            font-family: 'Poppins';
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 125%;
+            letter-spacing: 0%;
+            color: #5E6282;
+            margin: 0;
+        }
+    }
+
+    // Links
+    .links {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        gap: 100px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: -20px;
+        }
+
+        h4 {
+            font-family: 'Poppins';
+            font-weight: 700;
+            font-size: 21px;
+            line-height: 125%;
+            letter-spacing: 0%;
+
+            margin-bottom: 12px;
+            color: #080809;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-block: 13px;
+
+                a {
+                    font-family: 'Poppins';
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 125%;
+                    letter-spacing: 0%;
+
+                    color: #5E6282;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    // Social + Apps
+    .social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .icons {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 12px;
+
+            a {
+                background: #f5f5f5;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    background: #ececec;
+                }
+            }
+        }
+
+        .downloadLabel {
+            font-family: 'Poppins';
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 125%;
+            letter-spacing: 0.5%;
+
+            margin-bottom: 16px;
+        }
+
+        .appButtons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            .storeBtn {
+                width: 107px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                background: #080809;
+                color: #fff;
+                border-radius: 17.5px;
+                padding: 0 10px;
+                box-sizing: border-box;
+
+                .iconWrapper {
+                    width: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 6px;
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    font-size: 10px;
+                    line-height: 1;
+
+                    .top {
+                        font-size: 7px;
+                        opacity: 0.6;
+                    }
+
+                    .bottom {
+                        font-size: 10px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: 40px;
+        text-align: center;
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 125%;
+        letter-spacing: 0%;
+
+        color: #5E6282;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        .container {
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .footerBlock {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        .column {
+            width: 100%;
+
+            .logo {
+                margin-bottom: 12px;
+            }
+
+            .tagline {
+                max-width: 100%;
+                margin-bottom: 24px;
+            }
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            width: 100%;
+
+            div {
+                width: calc(50% - 12px); // 2 cột trên 1 hàng
+                margin-bottom: 16px;
+
+                h4 {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+
+                ul li {
+                    margin-bottom: 6px;
+
+                    a {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+
+        .social {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .icons {
+                margin: 20px 0;
+                display: flex;
+                gap: 16px;
+            }
+
+            .downloadLabel {
+                font-weight: 600;
+                margin-bottom: 12px;
+            }
+
+            .appButtons {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+        }
+
+
+        .copyright {
+            text-align: center;
+            width: 100%;
+            font-size: 13px;
+            color: #6e6e6e;
+            margin-top: 40px;
+        }
+    }
+}

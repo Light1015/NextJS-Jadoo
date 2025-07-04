@@ -1,0 +1,254 @@
+.header {
+    position: relative;
+    background-color: #fff;
+    z-index: 3;
+}
+
+.bgImage {
+    position: absolute;
+    top: -10px;
+    right: -8px;
+    width: 766.31px;
+    height: 872.58px;
+    background-image: url('/images/Decore-background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 10px;
+
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 70px;
+
+    a {
+        text-decoration: none;
+        color: #1f1f1f;
+        font-weight: 500;
+
+        &:hover {
+            color: #e48263;
+        }
+    }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    a {
+        text-decoration: none;
+        color: #1f1f1f;
+        font-weight: 500;
+    }
+}
+
+.signup {
+    padding: 8px 16px;
+    border: 1px solid #1f1f1f;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s;
+
+    &:hover {
+        background: #1f1f1f;
+        color: #fff;
+    }
+}
+
+.dropdown {
+    position: relative;
+    z-index: 1000;
+}
+
+.dropdownToggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    list-style: none;
+    padding: 4px 0;
+    z-index: 9999;
+
+    li {
+        padding: 8px 16px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+
+        &:hover {
+            background: #f5f5f5;
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .bgImage {
+        width: 40%;
+        max-width: 200px;
+        height: 220px;
+        top: -40px;
+        left: 293px;
+        background-size: contain;
+        opacity: 1;
+    }
+
+    .nav {
+        padding: 0px 20px;
+        display: none;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 16px;
+        margin-right: -100px;
+    }
+
+    .login,
+    .dropdown {
+        display: none;
+    }
+
+    .signup {
+        display: inline-block;
+        font-size: 14px;
+        padding: 6px 12px;
+        border: 1px solid #1f1f1f;
+        border-radius: 6px;
+        font-weight: 500;
+        color: #1f1f1f;
+
+        &:hover {
+            background: #1f1f1f;
+            color: #fff;
+        }
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: -60px;
+    }
+
+    .mobileMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 115vw;
+        height: 100vh;
+        background: #fff;
+        z-index: 99999;
+        animation: slideIn 0.3s ease forwards;
+        overflow-y: auto;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(-100%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    .mobileMenuHeader {
+        background: #FFF1DA;
+        padding: 20px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .closeBtn {
+        font-size: 24px;
+        background: none;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .mobileMenuList {
+        background: #fff;
+        list-style: none;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mobileItem {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+        font-size: 16px;
+        color: #181e4b;
+
+        a {
+            flex: 1;
+            text-decoration: none;
+            color: #181e4b;
+        }
+
+        svg {
+            margin-left: 8px;
+            flex-shrink: 0;
+        }
+    }
+
+    .mobileLangMenu {
+        padding-left: 16px;
+        padding-top: 8px;
+
+        li {
+            font-size: 14px;
+            padding: 4px 0;
+            color: #333;
+            cursor: pointer;
+        }
+    }
+}
